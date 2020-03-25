@@ -1,0 +1,791 @@
+﻿* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "微軟正黑體";
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+a,
+img,
+p {
+	padding: 0;
+	margin: 0;
+	bottom: 0;
+}
+
+li {
+	list-style: none;
+	display: inline-block;
+}
+
+li a:hover {
+	color: blue;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.fixed-width {
+	padding: 10px;
+}
+
+header {
+	padding-bottom: 10px;
+	font-size: 0;
+	text-align: center;
+	margin: auto;
+}
+
+header .tel,
+header .headerNav {
+	display: none;
+}
+
+header .logo img {
+	vertical-align: top;
+	width: 50px;
+}
+
+header .burger {
+	width: 30px;
+	height: 20px;
+	position: fixed;
+	top: 12px;
+	right: 10px;
+	z-index: 3;
+	cursor: pointer;
+}
+
+header .burger a {
+	display: block;
+}
+
+.burger:hover .burgerLine::before {
+	content: "";
+	width: 100%;
+	transition: all 0.5s ease;
+}
+
+.burger:hover .burgerLine::after {
+	content: "";
+	width: 100%;
+	transition: all 0.5s ease;
+}
+
+header .burger .burgerLine {
+	height: 3px;
+	background-color: #000;
+}
+
+header .burger .burgerLine::before {
+	content: "";
+	display: block;
+	width: 50%;
+	height: 3px;
+	background-color: #000;
+	transform: translateY(9px);
+}
+
+header .burger .burgerLine::after {
+	content: "";
+	display: block;
+	width: 70%;
+	height: 3px;
+	background-color: #000;
+	transform: translateY(15px);
+}
+
+header .tel span {
+	font-size: 14px;
+}
+
+main {
+	margin: auto;
+	text-align: center;
+}
+
+main .slide {
+	position: relative;
+	width: 100%;
+	height: 0px;
+	padding-bottom: 56.25%;
+	overflow: hidden;
+}
+
+main .slide img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+main .slide .row {
+	opacity: 0;
+	z-index: -1;
+}
+
+main .swiper {
+	padding: 5px;
+}
+
+main .swiper .swiperPoint:hover {
+	background-color: black;
+}
+
+main .swiper .swiperPoint {
+	display: inline-block;
+	width: 40px;
+	height: 5px;
+	margin: 5px;
+	background-color: #aaa;
+	cursor: pointer;
+}
+
+section {
+	width: 95%;
+	text-align: center;
+	margin: auto;
+}
+
+section h2 {
+	margin: 30px 0 20px 0;
+	font-size: 30px;
+	font-weight: bolder;
+}
+
+section h2::after {
+	content: "";
+	display: block;
+	width: 50px;
+	height: 2px;
+	background-color: #000;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 20px 0 20px 0;
+}
+
+section h5 {
+	display: inline-block;
+	margin: auto;
+	width: 200px;
+	padding: 15px;
+	border: 1px solid black;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	color: black;
+}
+
+.btn :hover {
+	background-color: #000;
+	color: white;
+	transition: all 0.2s ease;
+}
+
+.btnLight :hover {
+	background-color: white;
+	color: black !important;
+	transition: all 0.2s ease;
+}
+
+.information p {
+	font-size: 10px;
+	text-align: left;
+}
+
+.information span {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.information p a:hover {
+	text-decoration: underline;
+}
+
+.about {
+	background-color: RGB(235, 239, 245);
+	padding: 20px 0;
+}
+
+.about p {
+	font-size: 10px;
+	text-align: left;
+}
+
+.studio h3 {
+	font-size: 24px;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.studio .studioTitle {
+	margin-top: 20px;
+}
+
+.studioImg,
+.blogImg {
+	width: 100%;
+	overflow: hidden;
+}
+
+.studioImg img,
+.blogImg img {
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	transition: all 0.5s ease;
+}
+
+.studioImg:hover > img,
+.blogImg:hover > img {
+	transform: scale(1.1, 1.1);
+}
+
+.studioInfo,
+.blogInfo {
+	font-size: 0;
+	margin: 10px 0;
+}
+
+.studioInfo .studioInfoLeft span,
+.blogInfo .blogInfoLeft span {
+	font-size: 16px;
+}
+
+.studioInfo .studioInfoLeft,
+.blogInfo .blogInfoLeft {
+	width: 20%;
+	font-size: 10px;
+	display: inline-block;
+	border-right: 1px solid black;
+	height: 50px;
+}
+
+.studioInfo .studioInfoRight,
+.blogInfo .blogInfoRight {
+	width: 80%;
+	font-size: 12px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	padding-left: 3%;
+	position: relative;
+	height: 50px;
+}
+
+.studioInfo .studioInfoRight p,
+.blogInfo .blogInfoRight p {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.service {
+	margin-top: 30px;
+	padding: 30px 0;
+	background-image: url(https://source.unsplash.com/1024x768/?blueSky);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.service p {
+	padding: 10px;
+	font-size: 14px;
+}
+
+.blogInfo .blogInfoLeft span {
+	font-size: 18px;
+	font-weight: 900;
+}
+
+.access {
+	background-color: RGB(8, 51, 135);
+	color: white;
+	text-align: left;
+	padding: 15px 20px;
+}
+
+.access a,
+.access h5 {
+	color: white;
+}
+
+.access h6 {
+	font-size: 50px;
+}
+
+.access address {
+	font-size: 14px;
+	margin: 5px 0;
+	font-style: normal;
+}
+
+.access p {
+	font-size: 16px;
+}
+
+.access h5 {
+	border: 1px solid white;
+	text-align: center;
+	margin-left: 0;
+}
+
+iframe {
+	width: 100%;
+	height: 300px;
+}
+
+footer {
+	margin: auto;
+	width: 95%;
+	text-align: left;
+	padding-top: 10px;
+}
+
+.footerNav {
+	display: none;
+}
+
+footer img {
+	width: 60px;
+	padding: 10px;
+}
+
+footer p {
+	padding-left: 10px;
+	font-size: 10px;
+}
+
+footer .scroll {
+	width: 100px;
+	height: 20px;
+	line-height: 20px;
+	text-align: right;
+	position: fixed;
+	bottom: 0px;
+	right: 10px;
+	transform: rotate(90deg);
+	transform-origin: right top;
+}
+
+footer .scroll span {
+	width: 45%;
+	height: 10px;
+	display: inline-block;
+	position: relative;
+	margin-bottom: 1px;
+	overflow: hidden;
+}
+
+footer .scroll span::before {
+	content: "";
+	width: 50px;
+	display: inline-block;
+	border: 1px solid black;
+	position: absolute;
+	top: 50%;
+	right: -100%;
+	animation: scrollline 1.5s ease infinite;
+}
+
+@keyframes scrollline {
+	0% {
+		right: -100%;
+	}
+	100% {
+		right: 100%;
+	}
+}
+
+footer.burgerOn {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	background-color: rgba(255, 255, 255, 0.95);
+	padding: 0% 5%;
+}
+
+footer.burgerOn p,
+footer.burgerOn .scroll {
+	display: none;
+}
+
+header.burgerOn .burger .burgerLine {
+	background-color: transparent;
+}
+
+header.burgerOn .burger .burgerLine::before {
+	width: 110%;
+	transform-origin: left bottom;
+	transform: rotate(45deg);
+}
+
+header.burgerOn .burger .burgerLine::after {
+	width: 110%;
+	transform-origin: right bottom;
+	transform: rotate(-45deg) translate(-10%, -8px);
+}
+
+header.burgerOn .tel {
+	display: inline-block;
+	position: fixed;
+	top: 9%;
+	right: 5%;
+	text-align: right;
+	z-index: 3;
+	font-size: 12px;
+	color: black;
+}
+
+footer.burgerOn img {
+	position: absolute;
+	top: 9%;
+	left: 5%;
+	padding: 0;
+}
+
+footer.burgerOn .footerNav {
+	display: block;
+	font-size: 0;
+	margin-top: 100px;
+}
+
+footer.burgerOn .footerItem {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	font-size: 14px;
+}
+
+footer.burgerOn .footerItem li {
+	display: block;
+	margin-top: 5px;
+}
+
+footer.burgerOn .footerItem h3 {
+	margin-top: 5px;
+}
+
+footer.burgerOn .footerRight {
+	position: relative;
+	left: 50%;
+}
+
+@media screen and (min-width: 575px) {
+	header {
+		position: relative;
+	}
+	header .tel {
+		display: inline-block;
+		position: absolute;
+		top: 2%;
+		left: 0%;
+		text-align: left;
+		font-size: 12px;
+	}
+	header .tel span {
+		font-size: 14px;
+		font-weight: bolder;
+	}
+	main .slideWrap {
+		max-width: 99%;
+		max-height: calc(100vh - 90px);
+		overflow: hidden;
+	}
+	.information p {
+		font-size: 14px;
+	}
+	.information span {
+		display: inline-block;
+		margin-right: 45px;
+		font-weight: bolder;
+	}
+	.about p {
+		font-size: 16px;
+		line-height: 22px;
+	}
+	.blogInfo .blogInfoLeft span {
+		font-size: 18px;
+		font-weight: 900;
+	}
+	.studioInfo .studioInfoLeft span,
+	.blogInfo .blogInfoLeft span {
+		font-size: 20px;
+	}
+	.studioInfo .studioInfoLeft,
+	.blogInfo .blogInfoLeft {
+		font-size: 14px;
+	}
+	.studioInfo .studioInfoRight,
+	.blogInfo .blogInfoRight {
+		font-size: 16px;
+	}
+	.service p {
+		font-size: 16px;
+		line-height: 18px;
+	}
+}
+
+@media screen and (min-width: 767px) {
+	header {
+		padding-bottom: 0px;
+		height: 40px;
+	}
+	main .slide img {
+		width: 90%;
+		left: 10%;
+	}
+	main .slide .row {
+		opacity: 1;
+		position: absolute;
+		top: 25%;
+		left: 2%;
+		text-align: left;
+		width: 700px;
+		font-size: 60px;
+		z-index: 1;
+	}
+	main .slide .row span {
+		display: inline-block;
+		background-color: rgba(255, 255, 255, 0.7);
+		margin-bottom: 15px;
+		padding: 5px 15px;
+		word-spacing: 2px;
+		letter-spacing: 1px;
+	}
+	.studioWrap,
+	.blogWrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: flex-start;
+	}
+	.blogInfo .blogInfoLeft {
+		width: 30%;
+	}
+	.blogInfo .blogInfoRight {
+		width: 70%;
+	}
+	.studioItems {
+		width: 300px;
+	}
+	.blogItems {
+		width: calc(100% / 3 - 10px);
+	}
+	.blogImg {
+		width: 100%;
+		height: 160px;
+		overflow: hidden;
+	}
+	.reSize img {
+		max-height: 130%;
+	}
+	.studioTitleNone {
+		height: 30px;
+	}
+	.footerNav {
+		display: block;
+	}
+	.footerNav ul {
+		display: inline-block;
+		margin: 20px;
+		vertical-align: top;
+		height: 400px;
+		letter-spacing: 1px;
+	}
+	.footerNav li {
+		display: block;
+		font-size: 14px;
+	}
+	.footerNav li:not(:first-child) {
+		margin: 10px 0;
+	}
+	.footerRight {
+		padding-top: 23px;
+	}
+	.footerStudioTitle {
+		padding-top: 15px;
+	}
+	footer a {
+		display: inline-block;
+	}
+	footer img {
+		margin-left: 15px;
+	}
+	footer p {
+		display: inline-block;
+		width: calc(100% - 15px - 60px);
+		height: 45px;
+		vertical-align: top;
+		line-height: 45px;
+		text-align: right;
+		font-size: 12px;
+	}
+	footer.burgerOn .footerItem {
+		width: 30%;
+		margin: 0;
+	}
+	footer.burgerOn .footerRight {
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+}
+
+@media screen and (min-width: 993px) {
+	header {
+		width: 100%;
+	}
+	header .logo {
+		width: 10%;
+		display: inline-block;
+		vertical-align: top;
+		position: static;
+	}
+	header .headerNav {
+		display: inline-block;
+		text-align: left;
+		vertical-align: middle;
+		width: 70%;
+	}
+	header .headerNav li {
+		margin: 0 9px;
+		font-size: 14px;
+		font-weight: 900;
+	}
+	header .triangleMenu {
+		font-size: 0;
+		height: 40px;
+	}
+	header .triangle {
+		width: 10px;
+		height: 10px;
+		display: block;
+		margin: auto;
+		transition: all 0.5s ease;
+	}
+	header .triangleMenu:hover .triangle {
+		transform: rotate(180deg);
+		transform-origin: 50% 50%;
+	}
+	header .triangleMenu:hover .headerNavWrap {
+		display: block;
+		position: absolute;
+		top: 39px;
+		left: 10%;
+		z-index: 2;
+		width: 400px;
+	}
+	header .headerNavWrap {
+		width: 400px;
+		display: none;
+	}
+	header .headerNavItem {
+		display: inline-block;
+		text-align: left;
+		background-color: #000;
+		color: white;
+		padding: 0 20px 20px 20px;
+		vertical-align: top;
+	}
+	header .headerNavItem a {
+		display: block;
+	}
+	header .headerNavRight {
+		margin-left: -4px;
+	}
+	header .headerNav .headerNavItem li {
+		display: block;
+		margin: 5px 0px 5px 0px;
+	}
+	header .headerNav .headerNavItem li a {
+		color: white;
+		display: block;
+	}
+	header .headerNav .headerNavItem li a:hover {
+		color: RGB(163, 173, 193);
+	}
+	header .headerNavStudioTitle {
+		margin-top: 20px;
+	}
+	header .burger {
+		top: 50%;
+		z-index: 1;
+	}
+	header .tel {
+		width: 18%;
+		position: static;
+		vertical-align: top;
+		text-align: right;
+	}
+	main .slide {
+		padding-bottom: 45.25%;
+	}
+	main .slide .row {
+		opacity: 1;
+		position: absolute;
+		top: 20%;
+	}
+	.blogInfo .blogInfoLeft {
+		width: 20%;
+	}
+	.blogInfo .blogInfoRight {
+		width: 80%;
+	}
+	.access {
+		width: 50%;
+		display: inline-block;
+	}
+	iframe {
+		width: 50%;
+		height: 285px;
+		display: inline-block;
+		vertical-align: bottom;
+		margin-left: -4px;
+	}
+	header.burgerOn .tel {
+		width: auto;
+	}
+	header.burgerOn .burger {
+		top: 12px;
+		z-index: 3;
+	}
+	footer.burgerOn {
+		padding: 0% 25%;
+	}
+	footer.burgerOn::after {
+		content: "";
+		width: 1px;
+		height: 200px;
+		display: block;
+		background-color: black;
+	}
+	header.burgerOn .tel {
+		right: 25%;
+	}
+	footer.burgerOn img {
+		left: 25%;
+	}
+	footer.burgerOn .footerItem {
+		width: 33.3%;
+	}
+}
